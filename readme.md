@@ -1,4 +1,4 @@
-# 🚀 Análise Exploratória de dados 
+# 🎯 Análise Exploratória de dados 
 Um pequeno script em Python para análise de dados. Focando nos primeiros passos quando estamos explorando as condições e possibilidades do nosso conjunto de dados. 
 
 ## 🚀 Funcionalidades
@@ -16,12 +16,12 @@ Um pequeno script em Python para análise de dados. Focando nos primeiros passos
 
     Pyton ou Google Colaboratory
 
-## 🛠️ Instalação e Uso
+## ⚙ Instalação e Uso
     O que você precisa para rodar este projeto:
     1. Clonar o repositório (git clone ....) e executar
     2. ou carregar o notebook jupiter deste repositório diretamente no colab.google.  
     
-## 🛠️ Visualizar o projeto com a sua execuão
+## 📸 Visualizar o projeto com a sua execuão
 
     Pelo próprio GitHub, você pode abrir diretamente o arquivo Jupiter [Note-Jupiter: Analise Exploratoria de Dados](https://github.com/leonardo78rs/Python_AnaliseExploratoriaDados/blob/main/ds-expl-analis-dados-completo.ipynb)
 
@@ -259,6 +259,7 @@ notas.groupby("filmeId").count()
 notas["filmeId"].value_counts().tail()
 
 notas.groupby("filmeId").count().query("nota == 1")
+
 
 
 
