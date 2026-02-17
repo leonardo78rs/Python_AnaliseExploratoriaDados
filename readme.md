@@ -14,7 +14,7 @@ Um pequeno script em Python para análise de dados. Focando nos primeiros passos
        
 ## 📋 Pré-requisitos
 
-    Pyton ou Google Colaboratory
+    Python ou Google Colaboratory
 
 ## ⚙ Instalação e Uso
     O que você precisa para rodar este projeto:
@@ -23,7 +23,8 @@ Um pequeno script em Python para análise de dados. Focando nos primeiros passos
     
 ## 📸 Visualizar o projeto com a sua execuão
 
-    Pelo próprio GitHub, você pode abrir diretamente o arquivo Jupiter [Note-Jupiter: Analise Exploratoria de Dados](https://github.com/leonardo78rs/Python_AnaliseExploratoriaDados/blob/main/ds-expl-analis-dados-completo.ipynb)
+    Pelo próprio GitHub, você pode abrir diretamente o arquivo Jupiter:
+[Note-Jupiter: Analise Exploratoria de Dados](https://github.com/leonardo78rs/Python_AnaliseExploratoriaDados/blob/main/ds-expl-analis-dados-completo.ipynb)
 
 
 # Conteúdo do projeto
@@ -259,6 +260,7 @@ notas.groupby("filmeId").count()
 notas["filmeId"].value_counts().tail()
 
 notas.groupby("filmeId").count().query("nota == 1")
+
 
 
 
