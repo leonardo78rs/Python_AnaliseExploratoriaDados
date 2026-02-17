@@ -1,7 +1,7 @@
 # 🎯 Análise Exploratória de dados 
 Um pequeno script em Python para análise de dados. Focando nos primeiros passos quando estamos explorando as condições e possibilidades do nosso conjunto de dados. 
 
-## 🚀 Funcionalidades
+## 🔖 Funcionalidades
     - Ler arquivo CSV
     - Investigar rapidamente os tipos e intervalos de valores  
     - Valores únicos, frequência, somas, médias e medianas
@@ -12,22 +12,23 @@ Um pequeno script em Python para análise de dados. Focando nos primeiros passos
     Linguagem: Python
     Libs: pandas, seaborn, matplotlib, numpy
        
-## 📋 Pré-requisitos
+## 👉 Pré-requisitos
 
     Python ou Google Colaboratory
 
-## ⚙ Instalação e Uso
+## 🚀 Instalação e Uso
     O que você precisa para rodar este projeto:
     1. Clonar o repositório (git clone ....) e executar
     2. ou carregar o notebook jupiter deste repositório diretamente no colab.google.  
     
-## 📸 Visualizar o projeto com a sua execução
+## 👁 Visualizar o projeto com a sua execução
 
 Pelo próprio GitHub, você pode abrir diretamente o arquivo Jupiter:
 [Note-Jupiter: Analise Exploratoria de Dados](https://github.com/leonardo78rs/Python_AnaliseExploratoriaDados/blob/main/ds-expl-analis-dados-completo.ipynb)
 
+# Temp: ✅ ⚠️➕ 👉🎲⚙️💻💡📋📦🛠️📌🚀💥❔⭐✨⚡🎓💾📷☎️⌚🔒🔑🔋🔎📊📆 📁✏️📕📚📰📝🎧🎨🌂🏦🚩🔄❌✔️🏭💬👉
 
-# Conteúdo do projeto
+# 📋 Conteúdo do arquivo 
 
 ### Início: Importar um arquivo e entender que tipo de informações temos
 import pandas as pd
@@ -259,6 +260,7 @@ notas.groupby("filmeId").count()
 notas["filmeId"].value_counts().tail()
 
 notas.groupby("filmeId").count().query("nota == 1")
+
 
 
 
