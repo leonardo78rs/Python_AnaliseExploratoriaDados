@@ -26,8 +26,6 @@ Um pequeno script em Python para análise de dados. Focando nos primeiros passos
 Pelo próprio GitHub, você pode abrir diretamente o arquivo Jupiter:
 [Note-Jupiter: Analise Exploratoria de Dados](https://github.com/leonardo78rs/Python_AnaliseExploratoriaDados/blob/main/ds-expl-analis-dados-completo.ipynb)
 
-# Temp: ✅ ⚠️➕ 👉🎲⚙️💻💡📋📦🛠️📌🚀💥❔⭐✨⚡🎓💾📷☎️⌚🔒🔑🔋🔎📊📆 📁✏️📕📚📰📝🎧🎨🌂🏦🚩🔄❌✔️🏭💬👉
-
 # 📋 Conteúdo do arquivo 
 
 ### Início: Importar um arquivo e entender que tipo de informações temos
@@ -260,6 +258,7 @@ notas.groupby("filmeId").count()
 notas["filmeId"].value_counts().tail()
 
 notas.groupby("filmeId").count().query("nota == 1")
+
 
 
 
