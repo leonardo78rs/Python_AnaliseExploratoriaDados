@@ -1,3 +1,5 @@
+
+Para Visualizar melhor veja o arquivo Jupiter [Note-Jupiter: Analise Exploratoria de Dados](https://github.com/leonardo78rs/Python_AnaliseExploratoriaDados/blob/main/ds-expl-analis-dados-completo.ipynb)
 import pandas as pd
 
 
@@ -229,5 +231,6 @@ notas.groupby("filmeId").count()
 notas["filmeId"].value_counts().tail()
 
 notas.groupby("filmeId").count().query("nota == 1")
+
 
 
