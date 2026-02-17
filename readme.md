@@ -29,7 +29,7 @@ Pelo próprio GitHub, você pode abrir diretamente o arquivo Jupiter:
 
 # Conteúdo do projeto
 
-~~~python
+### Início: Importar um arquivo e entender que tipo de informações temos
 import pandas as pd
 notas = pd.read_csv("https://raw.githubusercontent.com/alura-cursos/data-science-analise-exploratoria/main/Aula_0/ml-latest-small/ratings.csv")
 notas
@@ -58,9 +58,9 @@ notas["nota"].describe()
 import seaborn as sns
 
 sns.boxplot(notas["nota"])
-~~~
 
-## Explorando os filmes
+
+### Explorando os filmes
 
 filmes = pd.read_csv("https://raw.githubusercontent.com/alura-cursos/data-science-analise-exploratoria/main/Aula_0/ml-latest-small/movies.csv")
 filmes.columns = ["filmeId", "titulo", "generos"]
@@ -87,7 +87,7 @@ sns.displot(medias_por_filme, kde=True)
 plt.title("Histograma das médias dos filmes")
 
 
-## Outros filmes
+### Outros filmes
 
 tmdb = pd.read_csv("https://raw.githubusercontent.com/alura-cursos/data-science-analise-exploratoria/main/Aula_0/tmdb_5000_movies.csv")
 tmdb.head()
@@ -96,7 +96,7 @@ sns.displot(tmdb["revenue"])
 plt.title("Distribuição da receita dos filmes")
 plt.show()
 
-## prompt: gráfico de distribuicao do orçamento dos filmes (budget)
+### prompt: gráfico de distribuicao do orçamento dos filmes (budget)
 
 import matplotlib.pyplot as plt
 sns.displot(tmdb["budget"])
@@ -115,12 +115,12 @@ tmdb["original_language"].unique()
 
 tmdb["original_language"].value_counts()
 
-## lingua => categorica... sem ordem...
+### lingua => categorica... sem ordem...
 
-## budget (orcamento) => quantitativa continua
+### budget (orcamento) => quantitativa continua
 
-## nota do movielens => 0.5, 1, 1.5, ... ,5 => nao tem 2.5
-## quantidade de votos => 1,2,3,4,5... nao existe 2.5
+### nota do movielens => 0.5, 1, 1.5, ... ,5 => nao tem 2.5
+### quantidade de votos => 1,2,3,4,5... nao existe 2.5
 
 tmdb["original_language"].value_counts().index
 
@@ -134,11 +134,11 @@ sns.barplot(data = contagem_de_lingua, x="original_language", y="total")
 
 sns.countplot(data=tmdb, x="original_language")
 
-## show de horror que é o gráfico de pizza
+### gráfico de pizza não é adequado neste caso
 
 contagem_de_lingua.plot(kind="pie", y="total", labels=contagem_de_lingua["original_language"])
 
-## Melhorando nossa visualização
+### Melhorando nossa visualização
 
 total_por_lingua = tmdb["original_language"].value_counts()
 total_geral = total_por_lingua.sum()
@@ -184,11 +184,11 @@ sns.countplot(data=tmdb.query("original_language != 'en'"),
 plt.title("Distribuição da língua original nos filmes exceto em inglês")
 plt.show()
 
-## Comparar duas distribuições visualmente ou através de medidas
+### Comparar duas distribuições visualmente ou através de medidas
 
 filmes.head(2)
 
-## prompt: extraia as notas dos dois filmes em variaveis distintas
+### prompt: extraia as notas dos dois filmes em variaveis distintas
 notas_do_toy_story = notas.query("filmeId==1")["nota"]
 notas_do_jumanji = notas.query("filmeId==2")["nota"]
 
@@ -197,7 +197,7 @@ media_do_jumanji = notas_do_jumanji.mean()
 
 print(media_do_toy_story, media_do_jumanji)
 
-## prompt: mesmo mas com a mediana
+### prompt: mesmo mas com a mediana
 
 mediana_do_toy_story = notas_do_toy_story.median()
 mediana_do_jumanji = notas_do_jumanji.median()
@@ -246,7 +246,7 @@ sns.boxplot(data=notas.query("filmeId in [1,2,3,4,5]"),
             x="filmeId",
             y="nota")
 
-## prompt: mesmo grafico mas colorido
+### prompt: mesmo grafico mas colorido
 
 sns.boxplot(data=notas.query("filmeId in [1,2,3,4,5]"),
             x="filmeId",
@@ -259,6 +259,7 @@ notas.groupby("filmeId").count()
 notas["filmeId"].value_counts().tail()
 
 notas.groupby("filmeId").count().query("nota == 1")
+
 
 
 
