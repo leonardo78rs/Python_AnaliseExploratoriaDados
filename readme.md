@@ -21,20 +21,18 @@ Um pequeno script em Python para análise de dados. Focando nos primeiros passos
     1. Clonar o repositório (git clone ....) e executar
     2. ou carregar o notebook jupiter deste repositório diretamente no colab.google.  
     
-## 📸 Visualizar o projeto com a sua execuão
+## 📸 Visualizar o projeto com a sua execução
 
-    Pelo próprio GitHub, você pode abrir diretamente o arquivo Jupiter:
+Pelo próprio GitHub, você pode abrir diretamente o arquivo Jupiter:
 [Note-Jupiter: Analise Exploratoria de Dados](https://github.com/leonardo78rs/Python_AnaliseExploratoriaDados/blob/main/ds-expl-analis-dados-completo.ipynb)
 
 
 # Conteúdo do projeto
 
+~~~python
 import pandas as pd
-
-
 notas = pd.read_csv("https://raw.githubusercontent.com/alura-cursos/data-science-analise-exploratoria/main/Aula_0/ml-latest-small/ratings.csv")
 notas
-
 notas.shape
 
 notas.columns = ["usuarioId", "filmeId", "nota", "momento"]
@@ -60,6 +58,7 @@ notas["nota"].describe()
 import seaborn as sns
 
 sns.boxplot(notas["nota"])
+~~~
 
 ## Explorando os filmes
 
@@ -260,6 +259,7 @@ notas.groupby("filmeId").count()
 notas["filmeId"].value_counts().tail()
 
 notas.groupby("filmeId").count().query("nota == 1")
+
 
 
 
